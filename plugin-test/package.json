@@ -1,0 +1,12 @@
+{
+  "name": "@nocobase/plugin-test",
+  "version": "0.7.0-alpha.83",
+  "main": "lib/server/index.js",
+  "dependencies": {
+    "bizcharts": "^4.1.19"
+  },
+  "peerDependencies": {
+    "@nocobase/server": "*",
+    "@nocobase/test": "*"
+  }
+}
