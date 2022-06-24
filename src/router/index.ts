@@ -16,18 +16,17 @@ const routes = [
       {
         path: 'login',
         name: 'login',
-        component: () => import('../pages/user/LoginProvider.vue')
+        component: () => import('../pages/user/Login.vue')
       }
     ]
   },
   {
     path: '/admin/:name(.+)?',
     component: AdminLayout,
-    hidden: true,
   },
 
   {
-    path: '/404',
+    path: '/:pathMatch(.*)*',
     component: () => import('../pages/404/404.vue')
   }
 ]

@@ -9,7 +9,6 @@ const props = defineProps<{
 }>()
 const { provider } = props
 const { SchemaField } = createSchemaField(provider)
-
 </script>
 
 <template>

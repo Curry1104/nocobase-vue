@@ -3,10 +3,8 @@ import { inject, onMounted, ref, provide } from 'vue'
 import { useRouter } from 'vue-router'
 import { FormSymbol, createSchemaField, RecursionField, SchemaOptionsSymbol, SchemaExpressionScopeSymbol, useForm } from '@formily/vue'
 import SchemaComponent from '../../components/SchemaComponent/SchemaComponent.vue'
-import { Input, Form, Button } from 'ant-design-vue'
-import Action from '../../components/Action/Action.vue'
 
-
+const components = inject('components')
 const api = inject('api')
 const form = inject(FormSymbol);
 const router = useRouter()
@@ -53,16 +51,14 @@ const schema = {
         type: 'primary',
         useAction: '{{ useSignin }}',
         style: { width: '100%' },
-        content: '提交'
+        content: '登录'
       },
     }
   },
 }
 
 const provider = {
-  components: {
-    Input, Form, Button, Action
-  },
+  components,
   scope: {
     useSignin
   }

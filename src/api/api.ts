@@ -18,6 +18,27 @@ axios.interceptors.response.use(
 );
 const api = {
   storage: localStorage,
+  getRoutes(url: string) {
+    return axios.get(baseUrl + url, {
+      headers: {
+        Authorization: `Bearer ${this.getToken()}`
+      }
+    })
+  },
+  getJsonSchema(url: string) {
+    return axios.get(baseUrl + url, {
+      headers: {
+        Authorization: `Bearer ${this.getToken()}`
+      }
+    })
+  },
+  getProperties(url: string) {
+    return axios.get(baseUrl + url, {
+      headers: {
+        Authorization: `Bearer ${this.getToken()}`
+      }
+    })
+  },
   getLocale() {
     return this.storage.getItem('NOCOBASE_LOCALE');
   },

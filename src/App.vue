@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { FormProvider, createSchemaField, RecursionField, SchemaOptionsSymbol, SchemaExpressionScopeSymbol } from '@formily/vue'
-
-import { Input, Form, Button } from 'ant-design-vue'
 import api from './api/api'
 import { provide, ref } from 'vue';
 provide('api', api)
-
 </script>
 
 <template>
